@@ -1,0 +1,36 @@
+.row-gg{
+    display: flex;
+}
+.col-gg h1{
+    color: green;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 70px;
+    letter-spacing: 2px;
+}
+.col-gg{
+    width: 50%;
+    text-align: center;
+}
+.col-gg img{
+    width: 100%;
+}
+.row-pc{
+    width: 100%;
+}
+.row-pc img{
+    width: 100%;
+    margin-top: 30px;
+    padding: 20px;
+    opacity: 9;
+}
+.row-content p{
+    text-align: center;
+    color: rgb(76, 106, 33);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    font-size: 60px;
+}
+.row-content{
+    margin-top: -500px;
+    margin-bottom: 400px;
+}

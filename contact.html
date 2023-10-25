@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/style1.css">
+      <link rel="stylesheet" href="css/responsive.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?
+family=Poppins:wght@300; 400; 500; 600; 700&display=swap"
+rel="stylesheet">
+   </head>
+   <body>
+   <div class="container">
+      <div class="navbar">
+          <div class="logo">
+            <a href="index.html"><img src="images/logo.png" width="200px"></a>
+          </div>
+          <nav>
+          <ul id="MenuItems">
+          <li><a href="index.html">Home</a></li>
+          <div class="dropdown">
+            <li><a href="Products.html"> Products</a></li>
+            <div class="dropdown-content">
+                <li><button> <a href="Products.html"> Clothing</a></button></li>
+                <li><button><a href="phones.html"> Mobile Phones</a></button></li>
+                <li><button> Accessories</button></li>
+                <li><button> Headphones</button></li>
+                <li><button><a href="shoes.html"> Shoes</a></button></li>
+                </div>
+            </div>
+          <li><a href="About.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="Login.html">Account</a></li>
+          </ul>
+          </nav>
+          <a href="Cart.html"><img src="images/cart.png" width="30px" height="30px"></a>
+          <img src="images/menu.png" class="menu-icon"
+          onclick="menutoggle()">
+          </div>
+          </div>
+
+          <hr>
+
+      <!-- contact -->
+
+      <div class="contact">
+         <div class="container">
+            <div class="rows ">
+               <div class="col-md-8 offset-md-2">
+                  <div class="titlepage text_align_left" style="background-image: url(images/contact-bg.png);background-position: center;background-size: cover;">
+                     <h2>Get In Touch</h2>
+                  </div>
+                  <form id="request" class="main_form">
+                     <div class="rows">
+                        <div class="col-md-12">
+                           <input class="contactus" placeholder="Name" type="type" name=" Name"> 
+                        </div>
+                        <div class="col-md-12">
+                           <input class="contactus" placeholder="Phone Number" type="type" name="Phone Number">                          
+                        </div>
+                        <div class="col-md-12">
+                           <input class="contactus" placeholder="Email" type="type" name="Email">                          
+                        </div>
+                        <div class="col-md-12">
+                           <textarea class="textarea" placeholder="Message" type="type" Message="Name"></textarea>
+                        </div>
+                        <div class="col-md-12">
+                           <button class="send_btn">Send Now</button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+      
+<!-- Footer -->
+<div class="footer">
+   <div class="container">
+       <div class="row">
+           <div class="footer-col-1">
+               <h3>Download Our App</h3>
+               <p>Download App for Android and ios mobile phone.</p>
+               <div class="app-logo">
+                   <img src="images/play-store.png" alt="">
+                   <img src="images/app-store.png" alt="">
+               </div>
+               </div>
+<div class="footer-col-2">
+<a href="index.html"><img src="images/logo-white.png"></a>
+<p>Download App for Android and ios mobile phone. </p>
+</div>
+<div class="footer-col-3">
+   <h3>Company</h3>
+    <ul>
+        <a href="About.html"><li>About Us</li></a>
+        <a href="Awards.html"><li>Awards</li></a>
+        <a href="contact.html"><li>Contact Us</li></a>
+        <a href="TOS.html"><li>Terms of Services</li></a>
+    </ul>
+
+   </div>
+   <div class="footer-col-4">
+       <h3>Follow us</h3>
+       <ul>
+           <li>Facebook</li>
+           <li>Twitter</li>
+           <li>Instagram</li>
+           <li>Pinterest</li>
+       </ul>
+       </div>
+       </div>
+       </div>
+       <hr>
+       <p class="copyright">Copyright 2023 - Ecommerce Website</p>
+   </div>
+</div>
+
+
+<!-- Menu Toggle -->
+<script>
+   var MenuItems = document.getElementById("MenuItems");
+   MenuItems.style.maxHeight="0px";
+   function menutoggle(){
+       if(MenuItems.style.maxHeight == "0px")
+       {
+           MenuItems.style.maxHeight = "200px";
+       }
+       else
+       {
+           MenuItems.style.maxHeight = "0px";
+       }
+   }
+
+</script>
+<!-- Form Toggle  -->
+<script>
+   var LoginForm=document.getElementById("LoginForm");
+   var RegForm=document.getElementById("RegForm");
+   var indicator=document.getElementById("indicator")
+   function login(){
+       RegForm.style.transform="translate(300px)";
+       LoginForm.style.transform="translate(300px)"
+       indicator.style.transform="translate(0px)"
+   }
+   function register(){
+       RegForm.style.transform="translate(0px)";
+       LoginForm.style.transform="translate(0px)"
+       indicator.style.transform="translate(100px)"
+   }
+</script>
+
+
+   </body>
+   </html>

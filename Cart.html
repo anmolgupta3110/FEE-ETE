@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Products Cartify </title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?
+family=Poppins:wght@300; 400; 500; 600; 700&display=swap"
+rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" width="200px"></a>
+            </div>
+            <nav>
+            <ul id="MenuItems">
+            <li><a href="index.html">Home</a></li>
+            <div class="dropdown">
+                <li><a href="Products.html"> Products</a></li>
+                <div class="dropdown-content">
+                    <li><button> <a href="Products.html"> Clothing</a></button></li>
+                    <li><button><a href="phones.html"> Mobile Phones</a></button></li>
+                    <li><button> Accessories</button></li>
+                    <li><button> Headphones</button></li>
+                    <li><button><a href="shoes.html"> Shoes</a></button></li>
+                    </div>
+                </div>
+            <li><a href="About.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="Login.html">Account</a></li>
+            </ul>
+            </nav>
+            <a href="Cart.html"><img src="images/cart.png" width="30px" height="30px"></a>
+            <img src="images/menu.png" class="menu-icon"
+            onclick="menutoggle()">
+            </div>
+            </div>
+
+<!-- Cart item  -->
+
+<div class="small-container cart-page">
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Sub total</th>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="images/buy-1.jpg" alt="">
+                    <div>
+                        <p>PUMA Printed tshirt</p>
+                        <small>price: 999.00 Rs</small>
+                        <br>
+                        <a href="">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1"></td>
+            <td>999 Rs</td>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="images/buy-2.jpg" alt="">
+                    <div>
+                        <p>Trainers by HRX</p>
+                        <small>price: 900.00 Rs</small>
+                        <br>
+                        <a href="">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1"></td>
+            <td>900 RS</td>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="images/buy-3.jpg" alt="">
+                    <div>
+                        <p>NIKE Joggers</p>
+                        <small>price: 2400.00 Rs</small>
+                        <br>
+                        <a href="">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1"></td>
+            <td>2400 Rs</td>
+        </tr>
+    </table>
+    <div class="total-price">
+        <table>
+            <tr>
+                <td>Subtotal</td>
+                <td>4299</td>
+            </tr>
+            <tr>
+                <td>GST<sub>(18%)</sub></td>
+                <td>774</td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td>5072 Rs</td>
+            </tr>
+            <tr>
+                <td>
+                    Continue to Checkout
+                </td>
+                <td>
+                    <a href="payment.html" class="btn">
+                        Continue
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+<!-- Footer -->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>Download App for Android and ios mobile phone.</p>
+                <div class="app-logo">
+                    <img src="images/play-store.png" alt="">
+                    <img src="images/app-store.png" alt="">
+                </div>
+                </div>
+<div class="footer-col-2">
+<a href="index.html"><img src="images/logo-white.png"></a>
+<p>Download App for Android and ios mobile phone. </p>
+</div>
+<div class="footer-col-3">
+    <h3>Company</h3>
+    <ul>
+        <a href="About.html"><li>About Us</li></a>
+        <a href="Awards.html"><li>Awards</li></a>
+        <a href="contact.html"><li>Contact Us</li></a>
+        <a href="TOS.html"><li>Terms of Services</li></a>
+    </ul>
+
+    </div>
+    <div class="footer-col-4">
+        <h3>Follow us</h3>
+        <ul>
+            <li>Facebook</li>
+            <li>Twitter</li>
+            <li>Instagram</li>
+            <li>Pinterest</li>
+        </ul>
+        </div>
+        </div>
+        </div>
+        <hr>
+        <p class="copyright">Copyright 2023 - Ecommerce Website</p>
+    </div>
+</div>
+
+
+<!-- Menu Toggle -->
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+    MenuItems.style.maxHeight="0px";
+    function menutoggle(){
+        if(MenuItems.style.maxHeight == "0px")
+        {
+            MenuItems.style.maxHeight = "200px";
+        }
+        else
+        {
+            MenuItems.style.maxHeight = "0px";
+        }
+    }
+
+</script>
+    </body>
+    </html>

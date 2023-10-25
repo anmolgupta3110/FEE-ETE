@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        <link rel="stylesheet" href="headphone.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?
+family=Poppins:wght@300; 400; 500; 600; 700&display=swap"
+rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <title>Beats 3</title>
+    <body>
+        <div class="navbar" style="margin-left: -30px;margin-top: -10px;">
+            <div class="logo">
+            <a href="index.html"><img src="images/logo.png" width="200px"></a>
+            </div>
+            <nav>
+            <ul id="MenuItems">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Products.html">Products</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="Login.html">Account</a></li>
+            </ul>
+            </nav>
+            <a href="Cart.html"><img src="images/cart-white.png" width="30px" height="30px" style="margin-right: 30px;"></a>
+            <img src="images/menu.png" class="menu-icon"
+            onclick="menutoggle()">
+            </div>
+
+        <main class="main">
+            <section class="home section" id="home">
+                <div class="home__container container grid">
+                    <div>
+                        <img src="images/beats-top-left.png" alt="" class="home__img">
+                    </div>
+
+                    <div class="home__data">
+                        <div class="home__header">
+                            <h1 class="home__title">On ear</h1>
+                            <h2 class="home__subtitle">Beats 3</h2>
+                        </div>
+
+                        <div class="home__footer">
+                            <h3 class="home__title-description">Overview</h3>
+                            <p class="home__description">Enjoy award-winning Beats sound with wireless listening freedom and a sleek,
+                                streamlined design with comfortable padded earphones, delivering first-rate playback.
+                            </p>
+                            <a href="Cart.html" class="button button--flex">
+                                <span class="button--flex">
+                                    <i class="ri-shopping-bag-line button__icon"></i> Add to Bag
+                                </span>
+                                <span class="home__price"> ₹19,900</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="sponsor section">
+                <div class="sponsor__container container grid">
+                    <img src="images/beats-sponsor1.webp" alt="" class="sponsor__img">
+                    <img src="images/sponsor2.webp" alt="" class="sponsor__img">
+                    <img src="images/sponsor3.webp" alt="" class="sponsor__img">
+                    <img src="images/sponsor4.webp" alt="" class="sponsor__img">
+                </div>
+            </section>
+
+
+            <section class="specs section grid" id="specs">
+                <h2 class="section__title section__title-gradient">Specs</h2>
+
+                <div class="specs__container container grid">
+                    <div class="specs__content grid">
+                        <div class="specs__data">
+                            <i class="ri-bluetooth-line specs__icon"></i>
+                            <h3 class="specs__title">Connection</h3>
+                            <span class="specs__subtitle">Bluetooth v5.2</span>
+                        </div>
+
+                        <div class="specs__data">
+                            <i class="ri-battery-charge-line specs__icon"></i>
+                            <h3 class="specs__title">Battery</h3>
+                            <span class="specs__subtitle">Duration 40h</span>
+                        </div>
+
+                        <div class="specs__data">
+                            <i class="ri-plug-line specs__icon"></i>
+                            <h3 class="specs__title">Load</h3>
+                            <span class="specs__subtitle">Fast charge 4.2-AAC</span>
+                        </div>
+
+                        <div class="specs__data">
+                            <i class="ri-mic-line specs__icon"></i>
+                            <h3 class="specs__title">Microphone</h3>
+                            <span class="specs__subtitle">Supports Apple Siri <br> and Google</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <img src="images/beats-mid.webp" class="specs__img">
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="case section grid" id="case">
+                <h2 class="section__title section__title-gradient">Case</h2>
+
+                <div class="case__container container grid">
+                    <div>
+                        <img src="images/beats-case.webp" alt="" class="case__img">
+                    </div>
+
+                    <div class="case__data">
+                        <p class="case__description">With a comfortable and adaptable case so that you can
+                            store it whenever you want, and keep your durability forever.
+                        </p>
+                        <a href="#" class="button button--flex">
+                            <i class="ri-information-line button__icon"></i> More info
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="discount section">
+                <div class="discount__container container grid">
+                    <div class="discount__animate">
+                        <h2 class="discount__title">Immerse yourself in <br> your music</h2>
+                        <p class="discount__description">Get it now, up to 30% off.</p>
+                        <a href="#" class="button button--flex">
+                            <i class="ri-shopping-bag-line button__icon"></i> Shop Now
+                        </a>
+                    </div>
+
+                    <img src="images/beats-fold.webp" alt="" class="discount__img">
+                </div>
+            </section>
+
+
+            <section class="products section" id="products">
+                <h2 class="section__title section__title-gradient products__line">
+                    Choose <br> Your Style
+                </h2>
+
+                <div class="products__container container grid">
+                    <article class="products__card">
+                        <div class="products__content">
+                            <img src="images/beats-white.png" alt="" class="products__img">
+
+                            <h3 class="products__title">White</h3>
+                            <span class="products__price">₹19,900</span>
+
+                            <button class="button button--flex products__button">
+                                <i class="ri-shopping-bag-line button__icon"></i>
+                            </button>
+                        </div>
+                    </article>
+                    <article class="products__card">
+                        <div class="products__content">
+                            <img src="images/beats-blackred.webp" alt="" class="products__img">
+
+                            <h3 class="products__title">Red Black</h3>
+                            <span class="products__price">₹19,900</span>
+
+                            <button class="button button--flex products__button">
+                                <i class="ri-shopping-bag-line button__icon"></i>
+                            </button>
+                        </div>
+                    </article>
+                    <article class="products__card">
+                        <div class="products__content">
+                            <img src="images/beats-blackgold.webp" alt="" class="products__img">
+
+                            <h3 class="products__title">Black Gold</h3>
+                            <span class="products__price">₹19,900</span>
+
+                            <button class="button button--flex products__button">
+                                <i class="ri-shopping-bag-line button__icon"></i>
+                            </button>
+                        </div>
+                    </article>
+                    <article class="products__card">
+                        <div class="products__content">
+                            <img src="images/beats-blue.png" alt="" class="products__img">
+
+                            <h3 class="products__title">Blue</h3>
+                            <span class="products__price">₹19,900</span>
+
+                            <button class="button button--flex products__button">
+                                <i class="ri-shopping-bag-line button__icon"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="products__card">
+                        <div class="products__content">
+                            <img src="images/beats-twilightgrey.webp" alt="" class="products__img">
+
+                            <h3 class="products__title">Twilight gray</h3>
+                            <span class="products__price">₹19,900</span>
+
+                            <button class="button button--flex products__button">
+                                <i class="ri-shopping-bag-line button__icon"></i>
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+
+        
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="ri-arrow-up-s-line scrollup__icon"></i>
+        </a>
+
+<!-- Footer -->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>Download App for Android and ios mobile phone.</p>
+                <div class="app-logo">
+                    <img src="images/play-store.png" alt="">
+                    <img src="images/app-store.png" alt="">
+                </div>
+                </div>
+<div class="footer-col-2">
+<a href="index.html"><img src="images/logo-white.png"></a>
+<p>Download App for Android and ios mobile phone. </p>
+</div>
+<div class="footer-col-3">
+    <h3>Company</h3>
+    <ul>
+        <a href="About.html"><li>About Us</li></a>
+        <a href="Awards.html"><li>Awards</li></a>
+        <a href="contact.html"><li>Contact Us</li></a>
+        <a href="TOS.html"><li>Terms of Services</li></a>
+    </ul>
+
+    </div>
+    <div class="footer-col-4">
+        <h3>Follow us</h3>
+        <ul>
+            <li>Facebook</li>
+            <li>Twitter</li>
+            <li>Instagram</li>
+            <li>Pinterest</li>
+        </ul>
+        </div>
+        </div>
+        </div>
+        <hr>
+        <p class="copyright">Copyright 2023 - Ecommerce Website</p>
+    </div>
+</div>
+
+<!-- Menu Toggle -->
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+    MenuItems.style.maxHeight="0px";
+    function menutoggle(){
+        if(MenuItems.style.maxHeight == "0px")
+        {
+            MenuItems.style.maxHeight = "200px";
+        }
+        else
+        {
+            MenuItems.style.maxHeight = "0px";
+        }
+    }
+
+</script>
+<!-- Scroll to top -->
+        <script>
+
+            function scrollUp(){
+                const scrollUp = document.getElementById('scroll-up');
+                if(this.scrollY >= 200) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
+            }
+            window.addEventListener('scroll', scrollUp)
+            </script>
+
+
+
+    </body>
+</html>

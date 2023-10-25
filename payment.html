@@ -1,0 +1,73 @@
+<link rel="stylesheet" href="payment.css">
+
+<div id="wrapper">
+  <div id="container">
+
+    <div id="info">
+        <a href="Cart.html"><img id="back" src="images/bx-arrow-back.svg"></a>
+      <img id="product" src="images/logo.png"/>
+
+      <p>Total Cart Value</p>
+
+      <div id="price">
+
+        <h2>&#8377; 5 072</h2>
+
+      </div>
+    </div>
+
+    <div id="payment">
+      <form id="checkout">
+
+        <input class="card" id="visa" type="button" name="card" value="">
+        <input class="card" id="mastercard" type="button" name="card" value="">
+
+        <label>Credit Card Number</label>
+        <input id="cardnumber" type=text pattern="[0-9]{13,16}" name="cardnumber" requierd="true" placeholder="0123-4567-8901-2345">
+
+        <label>Card Holder</label>
+       <input id="cardholder" type="text" name="name" requierd="true" maxlength="50" placeholder="Cardholder">
+
+        <label>Expiration Date</label>
+        <label id="cvc-label">CVC/CVV</label>
+        <div id="left">
+            <select name="month" id="month" onchange="" size="1">
+              <option value="00">MM</option>
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+        <p>/</p>
+            <select name="year" id="year" onchange="" size="1">
+              <option value="00">YY</option>
+              <option value="01">23</option>
+              <option value="02">24</option>
+              <option value="03">25</option>
+              <option value="04">26</option>
+              <option value="05">27</option>
+              <option value="06">28</option>
+              <option value="07">29</option>
+              <option value="08">30</option>
+              <option value="09">31</option>
+              <option value="10">32</option>
+            </select>
+        </div>
+
+
+        <input id="cvc" type="text" placeholder="Cvc/Cvv" maxlength="3" />
+
+        <input class="btn" type="button" name="purchase" value="Purchase">
+      </form>
+    </div>
+
+  </div>
+</div>

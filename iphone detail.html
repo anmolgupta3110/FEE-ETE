@@ -1,0 +1,518 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300; 400; 500; 600; 700&display=swap" rel="stylesheet">
+
+<style>
+
+  html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+ 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+  display: flex;
+}
+
+.left-column {
+  width: 65%;
+  position: relative;
+}
+ 
+.right-column {
+  width: 35%;
+  margin-top: 60px;
+}
+.left-column img {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+ 
+.left-column img.active {
+  opacity: 1;
+}
+.product-description {
+  border-bottom: 1px solid #E1E8EE;
+  margin-bottom: 20px;
+}
+.product-description span {
+  font-size: 12px;
+  color: #358ED7;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.product-description h1 {
+  font-weight: 300;
+  font-size: 52px;
+  color: #43484D;
+  letter-spacing: -2px;
+}
+.product-description p {
+  font-size: 16px;
+  font-weight: 300;
+  color: #86939E;
+  line-height: 24px;
+}
+.product-color {
+  margin-bottom: 30px;
+}
+ 
+.color-choose div {
+  display: inline-block;
+}
+ 
+.color-choose input[type="radio"] {
+  display: none;
+}
+ 
+.color-choose input[type="radio"] + label span {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: -1px 4px 0 0;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.33);
+}
+ 
+.color-choose input[type="radio"]#white + label span {
+  background-color: #fcf9f9;
+}
+.color-choose input[type="radio"]#blue + label span {
+  background-color: #314780;
+}
+.color-choose input[type="radio"]#black + label span {
+  background-color: #323232;
+}
+ 
+.color-choose input[type="radio"]:checked + label span {
+  background-image: url(images/check-icn.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.storage-choose {
+  margin-bottom: 20px;
+}
+ 
+.storage-choose button {
+  border: 1px solid black;
+  padding: 13px 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 14px;
+  color: #5E6977;
+  background-color: #fff;
+  margin-bottom: 5px;
+  border-radius: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  /* transition: all .5s; */
+}
+ 
+/* .storage-choose button:hover, */
+.storage-choose button:active,
+.storage-choose button:focus {
+  border: 2px solid #1a7ed5;
+  outline: none;
+}
+ 
+.storage-config {
+  border-bottom: 1px solid #E1E8EE;
+  margin-bottom: 20px;
+}
+ 
+.storage-config a {
+  color: #358ED7;
+  text-decoration: none;
+  font-size: 12px;
+  position: relative;
+  margin: 10px 0;
+  display: inline-block;
+}
+ 
+.storage-config a:before {
+  content: "?";
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: 2px solid rgba(53, 142, 215, 0.5);
+  display: inline-block;
+  text-align: center;
+  line-height: 16px;
+  opacity: 0.5;
+  margin-right: 5px;
+}
+
+.product-price {
+  display: flex;
+  align-items: center;
+}
+ 
+.product-price span {
+  font-size: 26px;
+  font-weight: 300;
+  color: #43474D;
+  margin-right: 20px;
+}
+ 
+.cart-btn {
+  display: inline-block;
+  background-color: #0152f593;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 12px 30px;
+  transition: all .5s;
+}
+.cart-btn:hover {
+  background-color: #0152f5;
+  
+}
+
+
+
+* {box-sizing:border-box}
+
+
+.slideshow-container {
+  max-width: 1200px;
+  position: relative;
+  margin-left: -80px;
+  margin-top: 100px;
+  margin-right: 40px;
+}
+
+
+.mySlides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 35%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  background-color: rgb(148, 141, 141);
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+
+
+.images{
+    border-radius: 30px;
+    height: 550px;
+    width: 850px;
+}
+@media only screen and (max-width: 601px){
+  .container{
+    flex-wrap: wrap;
+  }
+  .slideshow-container{
+    max-width: 400px;
+    max-height: 300px;
+  }
+  .storage-config button{
+    /* display: flex; */
+  }
+  .right-column{
+    display: inline-block;
+  }
+  .images{
+    height: 300px;
+    width: 500px;
+    margin-left: 10px;
+  }
+  .next{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 800px){
+  .container{
+    flex-wrap: wrap;
+  }
+  .slideshow-container{
+    max-width: 500px;
+    max-height: 300px;
+  }
+  .storage-config button{
+    /* display: flex; */
+  }
+  .right-column{
+    display: inline-block;
+  }
+  .images{
+    height: 300px;
+    width: 550px;
+    margin-left: 60px;
+    /* margin-right: -150px; */
+  }
+  .next{
+    display: none;
+}
+}
+
+</style>
+
+<div class="navbar" style="margin-left: -30px;margin-top: -10px;">
+  <div class="logo">
+  <a href="index.html"><img src="images/logo.png" width="200px"></a>
+  </div>
+  <nav>
+  <ul id="MenuItems">
+  <li><a href="index.html">Home</a></li>
+  <div class="dropdown">
+    <li><a href="Products.html"> Products</a></li>
+    <div class="dropdown-content">
+        <li><button> <a href="Products.html"> Clothing</a></button></li>
+        <li><button><a href="phones.html"> Mobile Phones</a></button></li>
+        <li><button> Accessories</button></li>
+        <li><button> Headphones</button></li>
+        <li><button> Shoes</button></li>
+        </div>
+    </div>
+  <li><a href="About.html">About</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <li><a href="Login.html">Account</a></li>
+  </ul>
+  </nav>
+  <a href="Cart.html"><img src="images/cart.png" width="30px" height="30px"></a>
+  <img src="images/menu.png" class="menu-icon"
+  onclick="menutoggle()">
+  </div>
+
+
+
+<h1 style="margin-left: 60px;margin-top: 100px;margin-bottom: -100px;font-family: Arial, Helvetica, sans-serif;">
+    Buy iPhone 15 Pro
+</h1>
+
+<main class="container">
+
+
+
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+    <img class="images" id="img1" src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-1inch_GEO_EMEA?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=1693009279096">
+    </div>
+    <div class="mySlides fade">
+    <img class="images"src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-1inch_AV1?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=1693009275111">
+    </div>
+    <div class="mySlides fade">
+    <img class="images"src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-1inch_AV2_GEO_EMEA?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=1693009275424">
+    </div>
+    <div class="mySlides fade">
+    <img class="images"src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-1inch_AV4?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=1693009276702">
+    </div>
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+
+ 
+  <div class="right-column"> 
+
+    <div class="product-description">
+      <span style="">New</span>
+
+      <p>From ₹21483.00/mo. with instant savings and No Cost EMI or ₹134900.00</p>
+    </div>
+ 
+
+    <div class="product-configuration">
+ 
+
+      <div class="product-color">
+        <span>Color</span>
+ 
+        <div class="color-choose">
+          <div>
+            <input data-image="white" type="radio" id="white" name="color" value="white" checked>
+            <label for="white">
+                <span onclick="document.getElementById('img1').src='https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-1inch-whitetitanium?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=1692846367180'">
+                </span>
+            </label>
+          </div>
+
+
+          <div>
+            <input data-image="blue" type="radio" id="blue" name="color" value="blue">
+            <label for="blue">
+                <span onclick="document.getElementById('img1').src='https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-1inch-bluetitanium?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=1692846360609'">
+                </span>
+            </label>
+          </div>
+
+
+          <div>
+            <input data-image="black" type="radio" id="black" name="color" value="black">
+            <label for="black">
+                <span onclick="document.getElementById('img1').src='https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-1inch-blacktitanium?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=1692846357018'">
+                </span>
+            </label>
+          </div>
+        </div>
+ 
+      </div>
+ 
+      <div class="storage-config">
+        <span>Storage</span>
+ 
+        <div class="storage-choose">
+          <button>128GB From ₹21483.00/mo.
+            or MRP ₹134900
+            (Incl. of all taxes)</button>
+          <button>256GB From ₹23150.00/mo.
+            or MRP ₹144900
+            (Incl. of all taxes)</button>
+          <button>512GB From ₹26483.00/mo.
+            or MRP ₹164900
+            (Incl. of all taxes)</button>
+          <button>1TB From ₹29817.00/mo.
+            or MRP ₹184900
+            (Incl. of all taxes)</button>
+        </div>
+ 
+        <a href="Comparison.html">Need help choosing the right model</a>
+      </div>
+    </div>
+ 
+    <!-- Product Pricing -->
+    <div class="product-price">
+      <a href="Cart.html" class="cart-btn">Add to cart</a>
+    </div>
+  </div>
+</main>
+
+<script>
+    let slideIndex = 1;
+showSlides(slideIndex);
+
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+
+<!-- Footer -->
+<div class="footer">
+  <div class="container">
+      <div class="row">
+          <div class="footer-col-1">
+              <h3>Download Our App</h3>
+              <p>Download App for Android and ios mobile phone.</p>
+              <div class="app-logo">
+                  <img src="images/play-store.png" alt="">
+                  <img src="images/app-store.png" alt="">
+              </div>
+              </div>
+<div class="footer-col-2">
+<a href="index.html"><img src="images/logo-white.png"></a>
+<p>Download App for Android and ios mobile phone. </p>
+</div>
+<div class="footer-col-3">
+  <h3>Company</h3>
+  <ul>
+      <a href="About.html"><li>About Us</li></a>
+      <a href="Awards.html"><li>Awards</li></a>
+      <a href="contact.html"><li>Contact Us</li></a>
+      <a href="TOS.html"><li>Terms of Services</li></a>
+  </ul>
+
+  </div>
+  <div class="footer-col-4">
+      <h3>Follow us</h3>
+      <ul>
+          <li>Facebook</li>
+          <li>Twitter</li>
+          <li>Instagram</li>
+          <li>Pinterest</li>
+      </ul>
+      </div>
+      </div>
+      </div>
+      <hr>
+      <p class="copyright">Copyright 2023 - Ecommerce Website</p>
+  </div>
+</div>
+
+<!-- Menu Toggle -->
+<script>
+  var MenuItems = document.getElementById("MenuItems");
+  MenuItems.style.maxHeight="0px";
+  function menutoggle(){
+      if(MenuItems.style.maxHeight == "0px")
+      {
+          MenuItems.style.maxHeight = "200px";
+      }
+      else
+      {
+          MenuItems.style.maxHeight = "0px";
+      }
+  }
+
+</script>
+  </body>
+  </html>
